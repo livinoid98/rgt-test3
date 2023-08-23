@@ -1,0 +1,75 @@
+@import "./reset.scss";
+@import "./function.scss";
+
+.order-wrap{
+    @include setSize(320px, 480px);
+    @include block-center;
+    @include flex(center, flex-start);
+    flex-direction: column;
+    padding:0px 28px;
+
+    .order-wrap-title{
+        h3{
+            @include font(22px, 700, #32323C);
+            line-height:25px;
+            b{
+                color:#3B3D9A;
+            }
+        }
+        p{
+            @include font(10px, 400, #727274);
+            line-height:12px;
+            margin-top:10px;
+        }
+    }
+    .order-wrap-content{
+        margin-top:27px;
+        h4{
+            @include font(14px, 400, #000);
+        }
+        table{
+            width:auto;
+            margin-top:14px;
+            tbody{
+                tr{
+                    td{
+                        @include setSize(160px, 24px);
+                        @include font(12px, 400, #000);
+                        input{
+                            width:12px;
+                            display: inline-block;
+                            border:none;
+                            @include font(12px, 400, #000);
+                        }
+                        &:nth-child(1){
+
+                        }
+                        &:nth-child(2){
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .button-wrap{
+        width:100%;
+        @include flex(center, center);
+        margin-top:34px;
+        button{
+            @include setSize(150px, 35px);
+            border:none;
+            border-radius: 6px;
+            cursor:pointer;
+            &:nth-child(1){
+                background-color:#ECECEC;
+                @include font(16px, 400, #302726);
+            }
+            &:nth-child(2){
+                background-color:#0078FF;
+                margin-left:auto;
+                @include font(16px, 400, #FEFFFF);
+            }
+        }
+    }
+}
